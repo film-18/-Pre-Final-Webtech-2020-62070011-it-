@@ -90,12 +90,12 @@
     if(isset($_POST['submit'])) {
         ob_end_clean();
         $find = $_POST['name'];
-        for($i=0; $i < sizeof($result->tracks->items);$i++){
+        for($i=0; $i < sizeof($result->tracks->items); $i++){
             $name = $result->tracks->items[$i]->album->artists[0]->name;
             $check = explode(" ", $name);
             if(sizeof($check) == 1){
                 if(($result->tracks->items[$i]->album->name == $find) or ($check[0]==$find)){
-                    echo '  <div class="col-4 mt-4">
+                    echo '  <div class="col-4">
                         <div class="card">
                             <img class="card-img-top" src="'.$result->tracks->items[$i]->album->images[0]->url.'" alt="">
                             <div class="card-body">
@@ -110,7 +110,7 @@
                 }
             } elseif(sizeof($check) == 2) {
                 if(($result->tracks->items[$i]->album->name == $name) or ($check[0]==$find) or ($check[1]==$find)){
-                    echo '  <div class="col-4 mt-4">
+                    echo '  <div class="col-4">
                         <div class="card">
                             <img class="card-img-top" src="'.$result->tracks->items[$i]->album->images[0]->url.'" alt="">
                             <div class="card-body">
