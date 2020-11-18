@@ -20,9 +20,9 @@
     <p class="text-center font-weight-bold h2"></p>
     <p class="text-center font-weight-bold h6" style="color:#39f077;">ระบุ</p>   
 
-        <form id="choose" action="select.php" method="POST">
+        <form id="choose" action="index.php" method="POST">
         <div class="input-group mb-3 mt-5" >
-        <input type="text" id="name" name="name" placeholder="Enter" required/><br>
+        <input type="text" id="name" name="name" placeholder="Enter"><br>
         <div class="input-group-append" >
             <button type="submit" name="submit" class="btn btn-primary font-weight-bold">ค้นหา</button>
         </div>
